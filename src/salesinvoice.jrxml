@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="226" pageHeight="435" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3160d3d7-2495-403e-a3f7-d40f6d1b617b">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="310"/>
+	<parameter name="invo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     sales_table.`id` AS sales_table_id,
+     sales_table.`invoiceno` AS sales_table_invoiceno,
+     sales_table.`product` AS sales_table_product,
+     sales_table.`packagetype` AS sales_table_packagetype,
+     sales_table.`quantity` AS sales_table_quantity,
+     sales_table.`batchno` AS sales_table_batchno,
+     sales_table.`destination` AS sales_table_destination,
+     sales_table.`price` AS sales_table_price,
+     sales_table.`time` AS sales_table_time,
+     sales_table.`date` AS sales_table_date,
+     sales_table.`paymenttype` AS sales_table_paymenttype,
+     sales_table.`description` AS sales_table_description,
+     sales_table.`salesperson` AS sales_table_salesperson,
+     sales_table.`manager` AS sales_table_manager,
+     sales_table.`security` AS sales_table_security
+FROM
+     `sales_table` sales_table WHERE sales_table.`id` = $P{invo}]]>
+	</queryString>
+	<field name="sales_table_id" class="java.lang.Integer"/>
+	<field name="sales_table_invoiceno" class="java.lang.String"/>
+	<field name="sales_table_product" class="java.lang.String"/>
+	<field name="sales_table_packagetype" class="java.lang.String"/>
+	<field name="sales_table_quantity" class="java.lang.Integer"/>
+	<field name="sales_table_batchno" class="java.lang.String"/>
+	<field name="sales_table_destination" class="java.lang.String"/>
+	<field name="sales_table_price" class="java.lang.String"/>
+	<field name="sales_table_time" class="java.lang.String"/>
+	<field name="sales_table_date" class="java.lang.String"/>
+	<field name="sales_table_paymenttype" class="java.lang.String"/>
+	<field name="sales_table_description" class="java.lang.String"/>
+	<field name="sales_table_salesperson" class="java.lang.String"/>
+	<field name="sales_table_manager" class="java.lang.String"/>
+	<field name="sales_table_security" class="java.lang.String"/>
+	<group name="sub">
+		<groupFooter>
+			<band height="105">
+				<textField>
+					<reportElement x="141" y="6" width="45" height="11" uuid="2131cc4a-8aec-491e-b45b-827648bf8a48"/>
+					<textElement>
+						<font fontName="Aller" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sales_table_price}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="99" y="6" width="35" height="11" uuid="ee3d7c2e-1117-4de9-9bee-578269117f32"/>
+					<textElement>
+						<font fontName="Aller" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Amount:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="135" y="6" width="9" height="11" uuid="639109b6-4d33-4c66-9d30-ad18c0a036fb"/>
+					<textElement>
+						<font fontName="Aller" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[N]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="34" width="75" height="10" uuid="4d30818e-1dc9-452f-b338-df79a1fcdf68"/>
+					<textElement>
+						<font fontName="Aller" size="7"/>
+					</textElement>
+					<text><![CDATA[Authorization Code:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="57" width="154" height="20" uuid="1586b158-fa89-4a76-ab56-c32c69d9b833"/>
+					<textElement>
+						<font fontName="Arial Narrow" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TRANSACTION APPROVED]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="47" y="91" width="87" height="11" uuid="5d6c16e6-aa6c-4980-b463-d906e337820c"/>
+					<textElement>
+						<font fontName="Aller" size="7"/>
+					</textElement>
+					<text><![CDATA[Thanks for your patronage]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="45" y="17" width="96" height="42" uuid="601070fa-2a3b-45aa-bf2d-a8ee8be54fa7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SACRED COMMUNION]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="2" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="78" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="67" width="26" height="9" uuid="05c5a41e-784b-42f1-8575-14dfc917c4fa"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<text><![CDATA[Item]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="118" y="3" width="64" height="21" uuid="3c9af7e5-7e9a-4579-98dd-acac79610db1"/>
+				<textElement>
+					<font fontName="Aller" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_table_invoiceno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="67" width="52" height="9" uuid="baf6d408-fe4b-4a57-9030-10248f73902a"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<text><![CDATA[Package Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="67" width="31" height="9" uuid="a8913c37-67d6-48a7-9a45-242b57c5b04a"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="3" width="39" height="10" uuid="470e4120-94ec-414b-bad8-942d07029bf7"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<text><![CDATA[Invoice No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="21" width="62" height="13" uuid="961d8039-bc98-4b62-bbae-bd1ec002beaa"/>
+				<textElement>
+					<font fontName="Aller" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CUSTOMER COPY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="31" width="51" height="12" uuid="98e50f95-79cf-4cc0-a735-7a80791f1145"/>
+				<textElement>
+					<font fontName="Aller" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PURCHASE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="47" width="38" height="13" uuid="34087212-0d12-456c-8552-17f322b88fd9"/>
+				<textElement>
+					<font fontName="Aller" size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Date/Time:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="43" y="47" width="83" height="12" uuid="0a6f6a66-21c9-4ff0-8356-ca578851136d"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="2" width="57" height="9" uuid="40d90d5d-de77-4528-a7a3-fba7921413e5"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_table_product}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="2" width="41" height="9" uuid="6e47f28e-1a41-4085-bd2a-f378d18b065a"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_table_packagetype}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="2" width="32" height="9" uuid="6ff625b1-c42f-4aa0-82fa-2cc3da4c8b15"/>
+				<textElement>
+					<font fontName="Aller" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sales_table_quantity}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="13" width="181" height="1" uuid="9f656d43-0a25-491e-9a1e-1c6538cd5b43"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="19" splitType="Stretch"/>
+	</summary>
+</jasperReport>
